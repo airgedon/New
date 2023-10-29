@@ -40,5 +40,15 @@ with open("romeo.txt", "r") as fhand:
 
 # ---------------------------------------------------------------------------
 
+with open("mbox.txt", "r") as fhand:
+    
+    count = 0
+    for line in fhand:
+        if line.startswith("From:"):
+            line = line.replace("From:", "")
+            print(line.rstrip())
+            count+=1
+    print("Total %d lines were printed" %count)
 
+# ---------------------------------------------------------------------------
 
