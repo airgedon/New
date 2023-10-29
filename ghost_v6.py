@@ -23,3 +23,19 @@ new_list = middle(my_list)
 print("new list after call middle function =>", new_list)
 
 # -----------------------------------------------------------------------
+
+
+with open("romeo.txt", "r") as fhand:
+    
+    my_list = fhand.read().split()
+    
+    new_word = input("Enter a new word to add to my list: ")
+    
+    if new_word in my_list:
+        print("The word is already in my list")
+    else:
+        my_list.append(new_word)
+        print(sorted(my_list))
+
+
+# ---------------------------------------------------------------------------
