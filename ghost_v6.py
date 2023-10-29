@@ -47,8 +47,35 @@ with open("mbox.txt", "r") as fhand:
         if line.startswith("From:"):
             line = line.replace("From:", "")
             print(line.rstrip())
-            count+=1
+            count += 1
     print("Total %d lines were printed" %count)
 
 # ---------------------------------------------------------------------------
+
+
+my_list = []
+
+while True:
+    try:
+        num_input = input("Please enter an integer(done to quit): ")
+        if num_input == "done":
+            print("------------------Bye!!---------------------")
+            break
+        else:
+            num_input = int(num_input)
+            my_list.append(num_input)
+            total = 0
+            count = 0
+            for num_input in my_list:
+                total += num_input
+                count += 1
+                
+            average_num_input = total / count
+            print(my_list,", average = ", average_num_input)
+    except ValueError:
+        print("Please, enter numeric input")
+        
+
+        
+
 
