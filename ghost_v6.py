@@ -31,11 +31,14 @@ with open("romeo.txt", "r") as fhand:
     
     new_word = input("Enter a new word to add to my list: ")
     
-    if new_word in my_list:
-        print("The word is already in my list")
-    else:
+    if new_word not in my_list:
         my_list.append(new_word)
-        print(sorted(my_list))
+        print(sorted(my_list))        
+    else:
+        print("The word is already in my list")
 
 
 # ---------------------------------------------------------------------------
+
+
+
