@@ -62,6 +62,8 @@ my_list = [15, 3, 11, 7]
 print("Normal Sort : ", sorted(my_list))
 print("Sort by key: ", sorted(my_list, key=func)) 
 ```
+
+
 ```
 students = {}
 print(students)
@@ -71,5 +73,4 @@ print(students)
 s_list = [('name', 'steve'), ('age', '32')]
 s_dict = dict(s_list)
 print(s_dict)
-
 ```
