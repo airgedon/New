@@ -64,7 +64,7 @@ print("Sort by key: ", sorted(my_list, key=func))
 ```
 
 
-```
+```py
 students = {}
 print(students)
 students['name'] = 'steve'
