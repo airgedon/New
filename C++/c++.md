@@ -107,3 +107,33 @@ int main()
     return 0;
 }
 ```
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Gaint {
+public:
+    string gaintname;
+    int id;
+    void printname();
+    void printid() {
+        std::cout << "\nGaint id: " << id << std::endl;
+    }
+};
+void Gaint::printname(){
+    cout << "\nGaintName is: " << gaintname;
+}
+
+int main()
+{
+    Gaint obj;
+    obj.gaintname ="xyz";
+    obj.id=15;
+    obj.printname();
+    cout<<endl;  // to give extra line (space)
+    obj.printid();
+    return 0;
+}
+```
