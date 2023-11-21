@@ -29,3 +29,36 @@ int main()
     return 0;
 }
 ```
+## Accessing the Data Members
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Box {
+public:
+    double len;
+    double brd;
+    double ht;
+};
+
+int main()
+{
+    Box b1;
+    Box b2;
+    double vol=0.0;
+    
+    b1.ht = 5.0;
+    b1.brd = 6.0;
+    b1.len = 7.0;
+    
+    b2.ht = 10.0;
+    b2.brd = 12.0;
+    b2.len = 13.0;
+
+    vol=b1.brd*b1.ht*b1.len;
+    cout << "Volume of Box1 is:\n" << vol <<endl;
+    return 0;
+}
+```
