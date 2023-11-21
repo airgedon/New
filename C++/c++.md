@@ -84,3 +84,26 @@ int main()
     return 0;
 }
 ```
+# A function outside a class
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+class A {
+public:
+    void fun();
+};
+
+void A::fun() {
+    std::cout << "fun() Called outside!" << std::endl;
+}
+
+int main()
+{
+    A a;  // A is the class's name and a is the object's name
+    a.fun();
+    return 0;
+}
+```
