@@ -119,7 +119,7 @@ public:
     int id;
     void printname();
     void printid() {
-        std::cout << "\nGaint id: " << id << std::endl;
+        cout << "\nGaint id: " << id << endl;
     }
 };
 void Gaint::printname(){
