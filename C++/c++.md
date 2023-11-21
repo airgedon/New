@@ -62,3 +62,25 @@ int main()
     return 0;
 }
 ```
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Person {
+public:
+    void getDetails(){
+        string name="Billa";
+        cout<<"My name is: "<<name;
+    }
+};
+
+int main()
+{
+    Person p;
+    
+    p.getDetails();
+    return 0;
+}
+```
