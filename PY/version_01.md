@@ -95,3 +95,16 @@ if 'name' in my_dict:
 else:
     print("name is not in dic")
 ```
+
+```py
+my_dict = {'banana': 2, 'apple': 3, 'pear': 1}
+
+sorted_dict = sorted(my_dict)
+print(sorted_dict) # ['apple', 'banana', 'pear']
+
+sorted_dict = dict(sorted(my_dict.items()))
+print(sorted_dict) # {'apple': 3, 'banana': 2, 'pear': 1}
+
+sorted_dict = dict(sorted(my_dict.items(), key=lambda x: x[1]))
+print(sorted_dict) # {'pear': 1, 'banana': 2, 'apple': 3}
+```
