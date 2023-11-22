@@ -140,3 +140,10 @@ print(counts)
 s_counts = sorted(counts.items())
 print(dict(s_counts))
 ```
+
+```py
+s_dict = {'name': 'steve', 'age': 18, 'id': '2354'}
+
+for i in s_dict:
+    print(i, ":", s_dict[i])
+```
