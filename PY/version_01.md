@@ -83,4 +83,15 @@ print(my_dict.values())
 print(my_dict.items())
 ```
 
+```py
+my_dict = {'name': 'Steve', 'age':34,'id': '2832'}
+print('name' in my_dict)
+del my_dict['name']
 
+print(my_dict)
+
+if 'name' in my_dict:
+    del my_dict['name']
+else:
+    print("name is not in dic")
+```
