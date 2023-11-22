@@ -122,3 +122,21 @@ for i in m_string:
 
 print(c_dict) # {'b': 2, 'r': 2, 'a': 2, 'v': 2, 'o': 2, 'm': 1, 'y': 1, 'l': 1, 'i': 1, 'f': 1, 'e': 1}
 ```
+
+```py
+fhand = open("doremi3.txt")
+counts = dict()
+
+for line in fhand:
+    words = line.split()
+    for word in words:
+        if word not in counts:
+            counts[word] = 1
+        else:
+            counts[word] +=1
+
+print(counts)
+
+s_counts = sorted(counts.items())
+print(dict(s_counts))
+```
