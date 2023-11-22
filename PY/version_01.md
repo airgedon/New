@@ -166,3 +166,14 @@ for length, word in t:
 
 print(res)
 ```
+
+```py
+d = {'a': 10, 'b': 1, 'c': 22}
+
+t = list(d)
+
+print(t) # ['a', 'b', 'c']
+
+t_list= list(d.items())
+print(t_list)  # [('a', 10), ('b', 1), ('c', 22)]
+```
