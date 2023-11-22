@@ -147,3 +147,22 @@ s_dict = {'name': 'steve', 'age': 18, 'id': '2354'}
 for i in s_dict:
     print(i, ":", s_dict[i])
 ```
+
+```py
+txt = "but soft what light in yonder window breaks"
+
+words = txt.split()
+t = list()
+
+for word in words:
+    t.append((len(word), word))
+
+t.sort(reverse=True)
+
+res = list()
+
+for length, word in t:
+    res.append(word)
+
+print(res)
+```
