@@ -175,5 +175,6 @@ t = list(d)
 print(t) # ['a', 'b', 'c']
 
 t_list= list(d.items())
-print(t_list)  # [('a', 10), ('b', 1), ('c', 22)]
+print(t_list)  # [('a', 10), ('b', 1), ('c', 22)]  = create a list of tuples of key-value pairs from a dictionary using the items method (list which elements are tuples of key-value pairs)
+
 ```
