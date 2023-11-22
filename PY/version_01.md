@@ -190,3 +190,30 @@ print(d_list)
 d_list.sort(reverse=True)
 print(d_list)
 ```
+
+```py
+import string
+
+fhand = open("itsmylife (1).txt")
+counts = dict()
+
+for line in fhand:
+    line = line.rstrip()
+    line = line.translate(line.maketrans("","",string.punctuation))
+    line = line.lower()
+    words = line.split()
+    for word in words:
+        if word not in counts:
+            counts[word] = 1
+        else: 
+            counts[word] +=1
+
+lst_counts = list()
+for key,val in counts.items():
+    lst_counts.append((val,key))
+
+lst_counts.sort(reverse=True)
+
+for key, val in lst_counts[:10]:
+    print(key,val)
+```
