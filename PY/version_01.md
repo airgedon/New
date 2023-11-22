@@ -69,7 +69,16 @@ students = {}
 print(students)
 students['name'] = 'steve'
 print(students)
+```
 
+```py
+my_dict = {'name': 'Steve', 'age':34 }
+
+print(len(my_dict))
+print(my_dict.keys())
+print(my_dict.values())
+print(my_dict.items())
+```
 s_list = [('name', 'steve'), ('age', '32')]
 s_dict = dict(s_list)
 print(s_dict)
