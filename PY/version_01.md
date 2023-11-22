@@ -108,3 +108,17 @@ print(sorted_dict) # {'apple': 3, 'banana': 2, 'pear': 1}
 sorted_dict = dict(sorted(my_dict.items(), key=lambda x: x[1]))
 print(sorted_dict) # {'pear': 1, 'banana': 2, 'apple': 3}
 ```
+
+```py
+m_string = "bravo bravo my life"
+c_dict= dict()
+for i in m_string:
+    if i == " ":
+        continue
+    if i not in c_dict:
+        c_dict[i] = 1
+    else:
+        c_dict[i] = c_dict[i]+1
+
+print(c_dict) # {'b': 2, 'r': 2, 'a': 2, 'v': 2, 'o': 2, 'm': 1, 'y': 1, 'l': 1, 'i': 1, 'f': 1, 'e': 1}
+```
