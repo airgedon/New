@@ -178,3 +178,15 @@ t_list= list(d.items())
 print(t_list)  # [('a', 10), ('b', 1), ('c', 22)]  = create a list of tuples of key-value pairs from a dictionary using the items method (list which elements are tuples of key-value pairs)
 
 ```
+```py
+d = {'a':10, 'b':1, 'c':22}
+
+d_list = list
+
+for key, val in d.items(): # items() returns a list of tuples. each element of the tuple is assigned to key and val
+    d_list.append((val,key))
+
+print(d_list)
+d_list.sort(reverse=True)
+print(d_list)
+```
