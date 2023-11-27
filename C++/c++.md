@@ -241,3 +241,43 @@ int main()
     return 0;
 }
 ```
+## Parameterized Constructor
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Line {
+    public:
+        void setLength( double wid);
+        double getLength(void); 
+        Line(double len);
+    private:
+        double length;
+};
+
+Line::Line(double len){
+    cout << "Object is created!" << endl;
+    length=len;
+}
+
+void Line::setLength(double len) {
+    length = len;
+}
+
+
+double Line::getLength(void) {
+    return length;
+}
+
+int main()
+{
+    Line line(10.0);
+    cout << "Length of line (initially): " << line.getLength() << endl;
+    
+    line.setLength(6.0);   //method
+    cout << "Length of line (After setting): " << line.getLength() << endl;
+    return 0;
+}
+```
