@@ -199,3 +199,45 @@ int main()
     return 0;
 }
 ```
+## Default Constructor
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Box {
+    public:
+        double length;
+        void setWidth( double wid);
+        double getWidth(void); 
+        Box();
+    private:
+        double width;
+};
+
+Box::Box(void){
+    cout<<"The object is being created!" << endl;
+}
+
+double Box::getWidth(void) {
+    return width;
+}
+
+void Box::setWidth(double wid) {
+    width = wid;
+}
+
+int main()
+{
+    Box box;
+  
+     box.length = 10.0;
+    cout << "Length of box: " << box.length << endl;
+    
+    box.setWidth(6.0);   //method
+    cout << "Length of box: " << box.getWidth() << endl;
+
+    return 0;
+}
+```
