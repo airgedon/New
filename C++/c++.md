@@ -282,3 +282,44 @@ int main()
     return 0;
 }
 ```
+## Class Destructor
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Line {
+    public:
+        void setLength( double wid);
+        double getLength(void); 
+        Line();
+        ~Line();
+    private:
+        double length;
+};
+
+Line::Line(void){
+    cout << "Object is created!" << endl;
+}
+
+Line::~Line(void){
+    cout << "Object is deleted!" << endl;
+}
+
+void Line::setLength(double len) {
+    length = len;
+}
+
+
+double Line::getLength(void) {
+    return length;
+}
+
+int main() {
+    Line line;
+    line.setLength(6.0);   //method
+    cout << "Length of line: " << line.getLength() << endl;
+    return 0;
+}
+```
