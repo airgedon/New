@@ -323,3 +323,36 @@ int main() {
     return 0;
 }
 ```
+## Friend Function
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Box {
+    double width;
+public:
+        friend void printWidth( Box box);
+        void setWidth(double wid); 
+};
+
+
+void Box::setWidth(double wid) {
+    width = wid;
+}
+
+
+void printWidth(Box box) {
+    cout << "Width of Box: " << box.width<< endl;
+    
+}
+
+int main() {
+    Box box;
+    box.setWidth(10.0);   
+    cout << "Using Friend Function: "<< endl;
+    printWidth(box);
+    return 0;
+}
+```
