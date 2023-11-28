@@ -455,3 +455,26 @@ int main()
     return 0;
 }
 ```
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Account {
+public:
+    float salary=60000;
+};
+
+class Programmer:public Account {
+public:
+    float bonus=5000;
+};
+
+int main()
+{
+    Programmer p1;
+    std::cout << "Salary(from parent):"<<p1.salary << std::endl;
+    cout<<"Bonus:(form child)"<<p1.bonus<<endl;
+    return 0;
+}
+```
