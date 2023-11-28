@@ -478,6 +478,8 @@ int main()
     return 0;
 }
 ```
+## Multiple Inheritance
+
 ```c++
 #include <iostream>
 
