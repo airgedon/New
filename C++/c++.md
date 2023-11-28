@@ -478,3 +478,46 @@ int main()
     return 0;
 }
 ```
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Shape {
+    protected:
+    int width,height;
+public:
+    void setwidth(int w) {
+        width=w;
+    }
+    void setheight(int h){
+        height=h;
+    }
+};
+
+class paintcost {
+public:
+    int getCost(int area){
+        return area*70;
+    }
+};
+
+class Rectangle:public Shape, public paintcost {
+    public:
+    int getArea(){
+        return (width*height);
+    }
+};
+
+int main()
+{
+    Rectangle rect;
+    int area;
+    rect.setheight(5);
+    rect.setwidth(7);
+    area=rect.getArea();
+    cout<<"Total area: " << rect.getArea() << endl;
+    cout<<"Total paintcost: "<< rect.getCost(area) << endl;
+    return 0;
+}
+```
