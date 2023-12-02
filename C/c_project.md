@@ -45,9 +45,9 @@ int main() {
 
     free(decryptedText);
   }
-```
 
   free(encryptedText);
 
   return 0;
 }
+```
