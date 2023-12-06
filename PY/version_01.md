@@ -240,3 +240,81 @@ sorted_counts = sorted(counts.items(), key=lambda x: (x[1], x[0]), reverse=True)
 for key, val in sorted_counts[:10]:
     print(val, key)
 ```
+
+```py
+import sqlite3
+
+con = sqlite3.connect('/home/deep-matrix/hello.db')
+cur = con.cursor()
+
+cur.execute("CREATE TABLE yourTable8(id char(4), user_name char(15), email char(15), birth_year int)")
+cur.execute("CREATE TABLE IF NOT EXISTS userTable(id char(4), userName char(15), email char(15), birth_year int)")
+
+while(True):
+    id_value = input("User ID: ")
+    if id_value == "":
+        break
+    user_name = input("User Name: ")
+    email = input("email: ")
+    birth_year = int(input("Birth year: "))
+    cur.execute("INSERT INTO yourTable8 VALUES (?, ?, ?, ?)", (id_value, user_name, email, birth_year))
+    con.commit()
+```
+
+```py
+import sqlite3
+
+
+id_value, user_name, email, birth_year = "", "", "", ""
+row = None
+con = sqlite3.connect('/home/deep-matrix/hello.db')
+cur = con.cursor()
+
+cur.execute("SELECT * FROM yourTable8")
+print("userID userName email birthYear ")
+print("-------------------------------------------------------")
+
+while(True):
+    row = cur.fetchone()
+    if row == None:
+        break
+    id_value = row[0]
+    user_name = row[1]
+    email = row[2]
+    birth_year = row[3]
+
+    print("%5s, %15s, %15s, %5d" % (id_value, user_name, email, birth_year))
+con.close()
+```
+
+```py
+import sqlite3
+
+
+id_value, user_name, email, birth_year = "", "", "", ""
+row = None
+con = sqlite3.connect('/home/deep-matrix/hello.db')
+cur = con.cursor()
+
+id_to_update = input("Enter the ID of the user you want to change: ")
+new_name = input("Enter a new name: ")
+cur.execute("UPDATE yourTable8  SET user_name = ? WHERE id = ?", (new_name, id_to_update))
+con.commit()
+cur.close()
+con.close()
+```
+
+
+```py
+import sqlite3
+
+con = sqlite3.connect('/home/deep-matrix/hello.db')
+cur = con.cursor()
+
+id_to_delete = input("Enter the ID of the user you want to delete: ")
+cur.execute("DELETE FROM yourTable8 WHERE id = ?", (id_to_delete,))
+con.commit()
+cur.close()
+con.close()
+```
+
