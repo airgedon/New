@@ -318,3 +318,28 @@ cur.close()
 con.close()
 ```
 
+```py
+import sqlite3
+
+
+pcode, pname, price, squantity = "", "", "", ""
+row = None
+con = sqlite3.connect('/home/deep-matrix/naverDB')
+cur = con.cursor()
+
+cur.execute("SELECT * FROM productTable")
+print("Product code   Product name      Price   Stock ")
+print("-------------------------------------------------------")
+
+while(True):
+    row = cur.fetchone()
+    if row == None:
+        break
+    pcode = row[0]
+    pname = row[1]
+    price = row[2]
+    squantity = row[3]
+
+    print("%5s  %15s  %15s  %5d" % (pcode, pname, price, squantity))
+con.close()
+```
